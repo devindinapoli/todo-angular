@@ -3,12 +3,13 @@ import { Observable } from 'rxjs/Rx';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Response } from '@angular/http';
 import { Injectable } from '@angular/core';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class TodoService {
 
   api_url = 'http://localhost:3000';
-  todoUrl = '${this.api_url}/api/todos';
+  todoUrl = 'http://localhost:3000/api/todos';
 
   constructor(
     private http: HttpClient
