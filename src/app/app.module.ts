@@ -1,3 +1,4 @@
+import { TodoService } from './services/todo.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,7 +15,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     FormsModule,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
